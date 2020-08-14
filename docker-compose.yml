@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  mobile:
+    image: cirrusci/flutter:latest
+    user: "${CURRENT_UID}"
+    working_dir: "/usr/src/app"
+    network_mode: "host"
+    volumes:
+    - .:/usr/src/app
+    command: bash
